@@ -5,7 +5,7 @@ general:
     - "build/outputs"
 dependencies:
   override:
-    - if [ -e ./gradlew ]; then TERM=dumb ./gradlew compileTestJava;else gradle compileTestJava;fi
+    - if [ -e ./gradlew ]; then TERM=dumb ./gradlew compileTest;else gradle compileTest;fi
 # dependencies:
 #   pre:
 #     - echo y | android update sdk --no-ui --all --filter "tools,platform-tools,android-23"
