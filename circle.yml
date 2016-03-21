@@ -3,6 +3,9 @@ general:
   artifacts:
     - "build/reports"
     - "build/outputs"
+dependencies:
+  override:
+    - if [ -e ./gradlew ]; then TERM=dumb ./gradlew compileTestJava;else gradle compileTestJava;fi
 # dependencies:
 #   pre:
 #     - echo y | android update sdk --no-ui --all --filter "tools,platform-tools,android-23"
